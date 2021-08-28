@@ -6,7 +6,9 @@ import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.example.whosthatpokemonapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding.optionTwo.setOnClickListener(this);
         binding.optionThree.setOnClickListener(this);
         binding.optionFour.setOnClickListener(this);
+        Glide.with(this).load("https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png").into(binding.pkmImage);
 
     }
 
