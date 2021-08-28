@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name"></string>
-    <string name="app_header">Who\'s That Pokemon?</string>
+    <string name="app_name">Who\'s that Pokemon?</string>
+    <string name="app_header">Who\'s that Pokemon?</string>
+    <string name="img_Description">Who\'s that Pokemon?</string>
 </resources>
