@@ -3,6 +3,7 @@ package com.example.whosthatpokemonapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -29,11 +30,16 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -112,6 +118,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.appHeader.setText("Incorrect!");
         }
         binding.pkmImage.setColorFilter(Color.argb(0, 0, 0, 0));
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                recreate();
+            }
+        }, 2000);
+
     }
 
     public void randomizeButtons(String n) {
