@@ -49,6 +49,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
+                android:onClick="onClick"
                 android:text="Button" />
 
             <Button
@@ -58,6 +59,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
+                android:onClick="onClick"
                 android:text="Button" />
 
             <Button
@@ -67,6 +69,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
+                android:onClick="onClick"
                 android:text="Button" />
 
             <Button
@@ -76,6 +79,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
+                android:onClick="onClick"
                 android:text="Button" />
 
         </LinearLayout>
