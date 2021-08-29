@@ -39,6 +39,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -142,9 +143,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttons.add(binding.optionTwo);
         buttons.add(binding.optionThree);
         buttons.add(binding.optionFour);
-
+        int num = ThreadLocalRandom.current().nextInt(0, 3 + 1);
         for (int i = 0; i < nums.size(); i++) {
-            if(i == 0) {
+            if(i == num) {
                 buttons.get(i).setText(n);
             }
             else {
